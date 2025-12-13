@@ -1,12 +1,18 @@
 import { useState } from 'react';
-
 import { navLinks } from '../constants/index.js';
 
-const NavItems = ({ onClick = () => {} }) => (
-  <ul className="nav-ul">
+const NavItems = ({ onClick = () => {}, activeLink }) => (
+  <ul className="flex gap-3 items-center justify-center">
     {navLinks.map((item) => (
-      <li key={item.id} className="nav-li">
-        <a href={item.href} className="nav-li_a" onClick={onClick}>
+      <li key={item.id}>
+        <a
+          href={item.href}
+          onClick={onClick}
+          className={`px-4 py-2 rounded-full transition-all duration-300 text-lg font-medium ${
+            activeLink === item.href
+              ? 'text-white'
+              : 'text-gray-500 hover:bg-black-500 hover:text-white rounded-full' // Inactive links: hover styles
+          }`}>
           {item.name}
         </a>
       </li>
@@ -15,35 +21,19 @@ const NavItems = ({ onClick = () => {} }) => (
 );
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
+  const [activeLink, setActiveLink] = useState('/');
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/90">
-      <div className="max-w-7xl mx-auto">
-        <div className="flex justify-between items-center py-5 mx-auto c-space">
-          <a href="/" className="text-neutral-400 font-bold text-xl hover:text-white transition-colors">
-            Adrian
-          </a>
-
-          <button
-            onClick={toggleMenu}
-            className="text-neutral-400 hover:text-white focus:outline-none sm:hidden flex"
-            aria-label="Toggle menu">
-            <img src={isOpen ? 'assets/close.svg' : 'assets/menu.svg'} alt="toggle" className="w-6 h-6" />
-          </button>
-
-          <nav className="sm:flex hidden">
-            <NavItems />
-          </nav>
-        </div>
-      </div>
-
-      <div className={`nav-sidebar ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
-        <nav className="p-5">
-          <NavItems onClick={closeMenu} />
+    <header className="fixed top-0 left-0 right-0 z-50 flex justify-center mt-10">
+      <div className="bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200 rounded-full shadow-lg py-4 px-8 sm:px-12">
+        <nav>
+          <NavItems
+            activeLink={activeLink}
+            onClick={(e) => {
+             
+              setActiveLink(e.target.getAttribute('href')); // Update active link
+            }}
+          />
         </nav>
       </div>
     </header>

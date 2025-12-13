@@ -4,38 +4,772 @@ Command: npx gltfjsx@6.5.0 hacker-room-new.glb -T
 Files: hacker-room-new.glb [34.62MB] > /Users/hsuwinlat/Desktop/jsm pj/threejscc-portfolio/public/models/hacker-room-new-transformed.glb [2.56MB] (93%)
 */
 
-import { useGLTF, useTexture } from '@react-three/drei';
+import { useGLTF } from '@react-three/drei';
 
 export function HackerRoom(props) {
-  const { nodes, materials } = useGLTF('/models/hacker-room.glb');
+  const { nodes, materials } = useGLTF('/models/macintosh_128k.glb');
 
-  const monitortxt = useTexture('textures/desk/monitor.png');
-  const screenTxt = useTexture('textures/desk/screen.png');
 
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.screen_screens_0.geometry} material={materials.screens}>
-        <meshMatcapMaterial map={screenTxt} />
-      </mesh>
-      <mesh geometry={nodes.screen_glass_glass_0.geometry} material={materials.glass} />
-      <mesh geometry={nodes.table_table_mat_0_1.geometry} material={materials.table_mat} />
-      <mesh geometry={nodes.table_table_mat_0_2.geometry} material={materials.computer_mat}>
-        <meshMatcapMaterial map={monitortxt} />
-      </mesh>
-      <mesh geometry={nodes.table_table_mat_0_3.geometry} material={materials.server_mat} />
-      <mesh geometry={nodes.table_table_mat_0_4.geometry} material={materials.vhsPlayer_mat} />
-      <mesh geometry={nodes.table_table_mat_0_5.geometry} material={materials.stand_mat} />
-      <mesh geometry={nodes.table_table_mat_0_6.geometry} material={materials.mat_mat} />
-      <mesh geometry={nodes.table_table_mat_0_7.geometry} material={materials.arm_mat} />
-      <mesh geometry={nodes.table_table_mat_0_8.geometry} material={materials.tv_mat}>
-        <meshMatcapMaterial map={monitortxt} />
-      </mesh>
-      <mesh geometry={nodes.table_table_mat_0_9.geometry} material={materials.cables_mat} />
-      <mesh geometry={nodes.table_table_mat_0_10.geometry} material={materials.props_mat} />
-      <mesh geometry={nodes.table_table_mat_0_11.geometry} material={materials.ground_mat} />
-      <mesh geometry={nodes.table_table_mat_0_12.geometry} material={materials.key_mat} />
+      <group rotation={[-Math.PI / 2, 0, 0]} scale={0.002}>
+        <group rotation={[Math.PI / 2, 0, 0]}>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cube008_hello_4_0.geometry}
+              material={materials.hello_4}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes['Cube008_Macintosh-128K-retro_0'].geometry}
+              material={materials['Macintosh-128K-retro']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Plane008_hello_4_0.geometry}
+              material={materials.hello_4}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes['Plane008_Macintosh-128K-retro_0'].geometry}
+              material={materials['Macintosh-128K-retro']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cube005_Material009_0.geometry}
+              material={materials['Material.009']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cube005_Material011_0.geometry}
+              material={materials['Material.011']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes['Plane001_Apple-0_0'].geometry}
+              material={materials['Apple-0']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder007_grey_0.geometry}
+              material={materials.grey}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes['Plane_Apple-0_0'].geometry}
+              material={materials['Apple-0']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes['Cube001_Apple-0_0'].geometry}
+              material={materials['Apple-0']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.korpus2_klava_2_1_0.geometry}
+              material={materials.klava_2_1}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.korpus2_Material005_0.geometry}
+              material={materials['Material.005']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.knopki001_klava_2_0.geometry}
+              material={materials.klava_2}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder002_hello_4_0.geometry}
+              material={materials.hello_4}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Sphere002_Material003_0.geometry}
+              material={materials['Material.003']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder003_hello_4_0.geometry}
+              material={materials.hello_4}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Sphere003_Material003_0.geometry}
+              material={materials['Material.003']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cube012_Material010_0.geometry}
+              material={materials['Material.010']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cube010_klava_2_1_0.geometry}
+              material={materials.klava_2_1}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cube011_klava_2_1_0.geometry}
+              material={materials.klava_2_1}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder016_derevo_0.geometry}
+              material={materials.derevo}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder016_grifel004_0.geometry}
+              material={materials['grifel.004']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder016_cvet004_0.geometry}
+              material={materials['cvet.004']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder017_derevo_0.geometry}
+              material={materials.derevo}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder017_grifel_0.geometry}
+              material={materials.grifel}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder017_cvet_0.geometry}
+              material={materials.cvet}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder018_derevo_0.geometry}
+              material={materials.derevo}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder018_grifel001_0.geometry}
+              material={materials['grifel.001']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder018_cvet001_0.geometry}
+              material={materials['cvet.001']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder019_derevo_0.geometry}
+              material={materials.derevo}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder019_grifel002_0.geometry}
+              material={materials['grifel.002']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder019_cvet002_0.geometry}
+              material={materials['cvet.002']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder020_derevo_0.geometry}
+              material={materials.derevo}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder020_grifel005_0.geometry}
+              material={materials['grifel.005']}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Cylinder020_cvet003_0.geometry}
+              material={materials['cvet.003']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Plane022_stiv_3_0.geometry}
+              material={materials.stiv_3}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Plane022_Material021_0.geometry}
+              material={materials['Material.021']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Plane023_stiv_2_0.geometry}
+              material={materials.stiv_2}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.Plane023_Material021_0.geometry}
+              material={materials['Material.021']}
+            />
+          </group>
+          <group rotation={[-Math.PI / 2, 0, 0]} scale={100}>
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.pol_kover_0.geometry}
+              material={materials.kover}
+            />
+            <mesh
+              castShadow
+              receiveShadow
+              geometry={nodes.pol_Material016_0.geometry}
+              material={materials['Material.016']}
+            />
+          </group>
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube002_hello_0.geometry}
+            material={materials.hello}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube003_hello_4_0.geometry}
+            material={materials.hello_4}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder_hello_4_0.geometry}
+            material={materials.hello_4}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder001_hello_4_0.geometry}
+            material={materials.hello_4}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Sphere_Material003_0.geometry}
+            material={materials['Material.003']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Sphere001_Material003_0.geometry}
+            material={materials['Material.003']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube007_Material002_0.geometry}
+            material={materials['Material.002']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube000_hello_4_0.geometry}
+            material={materials.hello_4}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane003_hello_4_0.geometry}
+            material={materials.hello_4}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane004_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane005_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane007_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane006_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane009_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane011_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane010_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane012_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane013_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane014_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane015_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane016_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane017_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane018_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes['Plane019_Macintosh-128K-retro_0'].geometry}
+            material={materials['Macintosh-128K-retro']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube009_hello_4_0.geometry}
+            material={materials.hello_4}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube006_Macintosh_2_0.geometry}
+            material={materials.Macintosh_2}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane002_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder005_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.BezierCurve001_grey_0.geometry}
+            material={materials.grey}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder004_grey_0.geometry}
+            material={materials.grey}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder010_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.BezierCurve_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube_katushka_0.geometry}
+            material={materials.katushka}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube015_wood_0.geometry}
+            material={materials.wood}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder006_grey_0.geometry}
+            material={materials.grey}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder008_grey_0.geometry}
+            material={materials.grey}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder009_grey_0.geometry}
+            material={materials.grey}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Torus001_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Torus_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder011_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder014_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder013_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder012_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane025_decal_2_0.geometry}
+            material={materials.decal_2}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane026_decal_3_0.geometry}
+            material={materials.decal_3}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Circle001_grey_0.geometry}
+            material={materials.grey}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube014_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube013_Material010_0.geometry}
+            material={materials['Material.010']}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane020_mahagon_3_0.geometry}
+            material={materials.mahagon_3}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane027_ruchki_0.geometry}
+            material={materials.ruchki}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane021_apple_2_0.geometry}
+            material={materials.apple_2}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube004_oblogka_0.geometry}
+            material={materials.oblogka}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube016_stranica_0.geometry}
+            material={materials.stranica}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cylinder015_grey_0.geometry}
+            material={materials.grey}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Torus002_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Torus003_black_0.geometry}
+            material={materials.black}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Plane024_knigi_0.geometry}
+            material={materials.knigi}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube017_oblogka_0.geometry}
+            material={materials.oblogka}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.Cube018_stranica_0.geometry}
+            material={materials.stranica}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          />
+          {/* <mesh
+            castShadow
+            receiveShadow
+            geometry={nodes.stul_stul_0.geometry}
+            material={materials.stul}
+            rotation={[-Math.PI / 2, 0, 0]}
+            scale={100}
+          /> */}
+        </group>
+      </group>
     </group>
   );
 }
 
-useGLTF.preload('/models/hacker-room.glb');
+useGLTF.preload('/models/macintosh_128k.glb');
